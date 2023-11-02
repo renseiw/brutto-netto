@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Brutto zu Netto Rechner</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Brutto zu Netto Rechner</h1>
+        <p>Ein einfacher Rechner, um Brutto- zu Nettobeträge umzurechnen und umgekehrt.</p>
+        <label for="mwst">Mehrwertsteuer:</label>
+        <select id="mwst">
+            <option value="0.05">5%</option>
+            <option value="0.07">7%</option>
+            <option value="0.16">16%</option>
+            <option value="0.19" selected>19%</option>
+        </select>
+        <br><br>
+        <input type="number" id="brutto" placeholder="Brutto">
+        <input type="number" id="netto" placeholder="Netto">
+        <button onclick="calculate()">Berechnen</button>
+    </div>
+    <!-- JavaScript Einbindung -->
+    <script src="app.js"></script>
+    <!-- Service Worker Registrierung -->
+<script>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(() => {
+          console.log('Service Worker registriert!');
+      });
+  }
+</script>
+</body>
+</html>
+X
